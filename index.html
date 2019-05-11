@@ -25,9 +25,11 @@
 
         <div class='container card-game'>
           <single-card
-            v-for='card in cards'
+            v-for='(card, index, selected) in cards'
             v-bind:text='card.text'
+            v-bind:index='card.index'
             v-bind:class='{
+              unselected: !card.selected,
               red: card.color === "red",
               orange: card.color === "orange",
               yellow: card.color === "yellow",
@@ -37,6 +39,7 @@
               black: card.color === "black",
               brown: card.color === "brown"
             }'
+            v-on:click.native='displayCard(card)'
           ></single-card>
         </div>
 

@@ -6,33 +6,33 @@
 
 // CARD ARRAY
 
-const cardArray = [
-   {'index': 1 , 'color': 'red', 'text': '?'},
-   {'index': 2 , 'color': 'orange', 'text': '?'},
-   {'index': 3 , 'color': 'yellow', 'text': '?'},
-   {'index': 4 , 'color': 'green', 'text': '?'},
-   {'index': 5 , 'color': 'blue', 'text': '?'},
-   {'index': 6 , 'color': 'purple', 'text': '?'},
-   {'index': 7 , 'color': 'black', 'text': '?'},
-   {'index': 8 , 'color': 'brown', 'text': '?'},
-   {'index': 9 , 'color': 'red', 'text': '?'},
-   {'index': 10 , 'color': 'orange', 'text': '?'},
-   {'index': 11 , 'color': 'yellow', 'text': '?'},
-   {'index': 12 , 'color': 'green', 'text': '?'},
-   {'index': 13 , 'color': 'blue', 'text': '?'},
-   {'index': 14 , 'color': 'purple', 'text': '?'},
-   {'index': 15 , 'color': 'black', 'text': '?'},
-   {'index': 16 , 'color': 'brown', 'text': '?'}
+var cardArray = [
+   {'index': 1 , 'color': 'red', 'text': '?', 'selected': false},
+   {'index': 2 , 'color': 'orange', 'text': '?', 'selected': false},
+   {'index': 3 , 'color': 'yellow', 'text': '?', 'selected': false},
+   {'index': 4 , 'color': 'green', 'text': '?', 'selected': false},
+   {'index': 5 , 'color': 'blue', 'text': '?', 'selected': false},
+   {'index': 6 , 'color': 'purple', 'text': '?', 'selected': false},
+   {'index': 7 , 'color': 'black', 'text': '?', 'selected': false},
+   {'index': 8 , 'color': 'brown', 'text': '?', 'selected': false},
+   {'index': 9 , 'color': 'red', 'text': '?', 'selected': false},
+   {'index': 10 , 'color': 'orange', 'text': '?', 'selected': false},
+   {'index': 11 , 'color': 'yellow', 'text': '?', 'selected': false},
+   {'index': 12 , 'color': 'green', 'text': '?', 'selected': false},
+   {'index': 13 , 'color': 'blue', 'text': '?', 'selected': false},
+   {'index': 14 , 'color': 'purple', 'text': '?', 'selected': false},
+   {'index': 15 , 'color': 'black', 'text': '?', 'selected': false},
+   {'index': 16 , 'color': 'brown', 'text': '?', 'selected': false}
 ];
 
 // CARD template
 
 Vue.component ( 'single-card', {
 	props: [
-		'cards', 'text'
+		'cards', 'text', 'selected'
 	],
 	template: `
-		<div class='card '>
+		<div class='card'>
 			<h2>{{ text }}</h2>
 		</div>
 	`
@@ -43,17 +43,26 @@ Vue.component ( 'single-card', {
 var vm = new Vue({
   el: "#cardApp",
   data: {
-    cards: cardArray
+    cards: cardArray,
+    selectedCards: []
+    // selectedCard: function(){
+    //   for( i = 0 ; i < this.cards.length ; i++ ){
+    //     return card[i].index;
+    //   }
+    // }
   },
   methods: {
-      shuffleCards: function() {
-        this.cards.sort(function() {
+      shuffleCards: function(){
+        this.cards.sort(function(){
         return 0.5 - Math.random()
         })
+      },
+
+      displayCard: function(cardSelected){
+        cardSelected.selected = true;
       }
 		},
   created: function(){
     this.shuffleCards();
-    console.log('yay!');
   }
 });
