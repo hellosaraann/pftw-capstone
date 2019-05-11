@@ -26,7 +26,7 @@ Vue.component ( 'single-card', {
 		'cards', 'text'
 	],
 	template: `
-		<div class='card'>
+		<div  class='card'>
 			<p>{{ text }}</p>
 		</div>
 	`

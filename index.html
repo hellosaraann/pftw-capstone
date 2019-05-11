@@ -7,19 +7,32 @@
     <title>A Moment to Match</title>
   </head>
   <body>
-    <div id='cardApp'>
-      <div class='container'>
-        <h1 class='info'>A Moment to Match</h1>
-        <p class='info'>
-      </div>
-      <div class='container'>
-          These cards long to find their hidden soul mate. Click to find a matching pair! Refresh to shuffle and start all over again. Like reincarnation, only shorter, with cards, and where everyone definitely has one and only one match.
-        </p>
-        <single-card
-          v-for='card in cards'
-          v-bind:text='card.text'
+    <div id='cardApp' class='container full'>
 
-        ></single-card>
+        <div class='container info'>
+          <h1>A Moment to Match</h1>
+          <p>
+            These cards long to find their hidden soul mate. Click to find a matching pair! Refresh to shuffle and start all over again. Like reincarnation, only shorter, with cards, and where everyone definitely has one and only one match.
+          </p>
+        </div>
+
+        <div class='container card-game'>
+          <single-card
+            v-for='card in cards'
+            v-bind:text='card.text'
+            v-bind:class='{
+              red: card.text === "red",
+              orange: card.text === "orange",
+              yellow: card.text === "yellow",
+              green: card.text === "green",
+              blue: card.text === "blue",
+              purple: card.text === "purple",
+              black: card.text === "black",
+              brown: card.text === "brown"
+            }'
+          ></single-card>
+        </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>

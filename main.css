@@ -17,31 +17,39 @@ h1 {
 /* STRUCTURE */
 
 .container {
-  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 1rem;
+}
+
+.container.full {
+  width: 100vw;
+  height: 100vh;
+  flex-wrap: nowrap;
 }
 
 .container.info {
-  width: 50%;
-  margin: 1rem;
+  width: 50vw;
   padding: 1rem;
+}
+
+.container.card-game {
+  width: 50vw;
+  height: auto;
 }
 
 .card {
   display: block;
   padding: 3em;
   margin: .5em;
-  width: 5%;
-  height: 5%;
+  width: 15px;
+  height: 15px;
   border: 2px solid #EFEEE0;
   border-radius: 1em;
 }
 
-.card.red {
+.red {
   background-color: red;
 }
 
@@ -49,7 +57,7 @@ h1 {
   background-color: orange;
 }
 
-.orange {
+.yellow {
   background-color: yellow;
 }
 
@@ -59,6 +67,10 @@ h1 {
 
 .blue {
   background-color: blue;
+}
+
+.purple {
+  background-color: purple;
 }
 
 .black {
