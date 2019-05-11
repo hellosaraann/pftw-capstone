@@ -1,0 +1,70 @@
+/* TYPOGRAPHY */
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.75em;
+  background-color: #E23A5A;
+  color: #EFEEE0;
+}
+
+h1 {
+  font-family: 'Coustard', serif;
+  font-size: 4em;
+  line-height: 1em;
+}
+
+
+/* STRUCTURE */
+
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+.container.info {
+  width: 50%;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  display: block;
+  padding: 3em;
+  margin: .5em;
+  width: 5%;
+  height: 5%;
+  border: 2px solid #EFEEE0;
+  border-radius: 1em;
+}
+
+.card.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.orange {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.black {
+  background-color: black;
+}
+
+.brown {
+  background-color: brown;
+}
