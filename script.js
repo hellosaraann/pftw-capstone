@@ -52,7 +52,7 @@ var vm = new Vue({
         })
       }
 		},
-  created: window.onload = function(){
+  created: function(){
     this.shuffleCards();
     console.log('yay!');
   }
