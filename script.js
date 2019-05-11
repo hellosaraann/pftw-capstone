@@ -32,7 +32,7 @@ Vue.component ( 'single-card', {
 		'cards', 'text'
 	],
 	template: `
-		<div class='card'>
+		<div class='card '>
 			<h2>{{ text }}</h2>
 		</div>
 	`
@@ -45,14 +45,15 @@ var vm = new Vue({
   data: {
     cards: cardArray
   },
-	methods: {
-      shuffleCards: function(array) {
-        array.sort(function() {
-          return 0.5 - Math.random()
+  methods: {
+      shuffleCards: function() {
+        this.cards.sort(function() {
+        return 0.5 - Math.random()
         })
-      },
-      newGame: function(){
-        window.onload.shuffleCards('cards');
       }
-		}
+		},
+  created: window.onload = function(){
+    this.shuffleCards();
+    console.log('yay!');
+  }
 });
