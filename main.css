@@ -7,10 +7,28 @@ body {
   color: #EFEEE0;
 }
 
+h1, h2 {
+  font-family: 'Coustard', serif;
+}
+
 h1 {
   font-family: 'Coustard', serif;
   font-size: 4em;
   line-height: 1em;
+  text-shadow: -5px 5px 5px #D2352F;
+}
+
+button {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background-color: #EFEEE0;
+  color: #E23A5A;
+  padding: 1em 1.75em;
+  border-radius: 1em;
+  box-shadow: -5px 5px 5px #D2352F;
+  margin: 5em 1em;
 }
 
 
@@ -25,19 +43,22 @@ h1 {
 
 .container.full {
   width: 100vw;
+  padding: 2rem;
   height: 100vh;
   flex-wrap: nowrap;
 }
 
 .container.info {
-  width: 50vw;
+  width: 40%;
   padding: 1rem;
 }
 
 .container.card-game {
-  width: 50vw;
+  width: 50%;
   height: auto;
 }
+
+/* CARDS */
 
 .card {
   display: block;
@@ -47,36 +68,59 @@ h1 {
   height: 15px;
   border: 5px solid #EFEEE0;
   border-radius: 1em;
+  box-shadow: -5px 5px 5px #D2352F;
 }
+
+.unselected {
+  background-color: #EFEEE0;
+  color: #E23A5A;
+}
+
+.card p {
+  text-align: center;
+  margin: auto;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* CARDS when clicked */
 
 .red {
   background-color: #E53022;
+  color: #E53022;
 }
 
 .orange {
   background-color: #E28E3A;
+  color: #E28E3A;
 }
 
 .yellow {
   background-color: #F1D36D;
+  color: #F1D36D;
 }
 
 .green {
   background-color: #4C9E7A;
+  color: #4C9E7A;
 }
 
 .blue {
   background-color: #2E667F;
+  color: #2E667F;
 }
 
 .purple {
   background-color: #86367A;
+  color: #86367A;
 }
 
 .black {
   background-color: #1A222D;
+  color: #1A222D;
 }
 
 .brown {
   background-color: #863129;
+  color: #863129;
 }

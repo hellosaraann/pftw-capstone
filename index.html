@@ -14,6 +14,10 @@
           <p>
             These cards long to find their hidden soul mate. Click to find a matching pair! Refresh to shuffle and start all over again. Like reincarnation, only shorter, with cards, and where everyone definitely has one and only one match.
           </p>
+          <button type="button"
+                  label="Shuffle Cards"
+                  id='shuffleButton'
+                  v-on:click='shuffleCards(cards)'>Shuffle Cards</button>
         </div>
 
         <div class='container card-game'>
@@ -21,14 +25,14 @@
             v-for='card in cards'
             v-bind:text='card.text'
             v-bind:class='{
-              red: card.text === "red",
-              orange: card.text === "orange",
-              yellow: card.text === "yellow",
-              green: card.text === "green",
-              blue: card.text === "blue",
-              purple: card.text === "purple",
-              black: card.text === "black",
-              brown: card.text === "brown"
+              red: card.color === "red",
+              orange: card.color === "orange",
+              yellow: card.color === "yellow",
+              green: card.color === "green",
+              blue: card.color === "blue",
+              purple: card.color === "purple",
+              black: card.color === "black",
+              brown: card.color === "brown"
             }'
           ></single-card>
         </div>
