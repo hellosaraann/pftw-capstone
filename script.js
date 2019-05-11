@@ -46,10 +46,13 @@ var vm = new Vue({
     cards: cardArray
   },
 	methods: {
-    shuffleCards: function(array) {
-      array.sort(function() {
-        return 0.5 - Math.random()
-      })
-    }
+      shuffleCards: function(array) {
+        array.sort(function() {
+          return 0.5 - Math.random()
+        })
+      },
+      newGame: function(){
+        window.onload.shuffleCards('cards');
+      }
 		}
 });
