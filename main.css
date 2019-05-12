@@ -166,12 +166,3 @@ button {
 .winning {
   animation: pulse .75s 0s infinite ease-in;
 }
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.15);
-  }
-}
