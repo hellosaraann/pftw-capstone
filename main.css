@@ -128,3 +128,12 @@ button {
   background-color: #863129;
   color: #863129;
 }
+
+.matched {
+  border: 5px dotted #EFEEE0;
+  color: #E23A5A;
+}
+
+.mismatch {
+  color: #EFEEE0;
+}
