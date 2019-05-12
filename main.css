@@ -75,6 +75,9 @@ button {
   border-radius: 1em;
   box-shadow: -5px 5px 5px #D2352F;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card.unselected {
@@ -85,9 +88,10 @@ button {
 .card h2 {
   text-align: center;
   margin: 0 auto;
+
 }
 
-/* CARDS when clicked */
+/* CARDS when revealed */
 
 .red {
   background-color: #E53022;
@@ -131,9 +135,43 @@ button {
 
 .matched {
   border: 5px dotted #EFEEE0;
-  color: #E23A5A;
+  color: #EFEEE0;
+  animation: pulse .75s ease-in 0s;
+  text-shadow: -2px 2px 5px #D2352F;
+
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.15);
+  }
+  10% {
+    transform: scale(1.25);
+  }
+  25% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .mismatch {
   color: #EFEEE0;
+}
+
+.winning {
+  animation: pulse .75s 0s infinite ease-in;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
 }

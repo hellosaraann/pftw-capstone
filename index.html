@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <link href="main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Coustard:900|Lato:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>A Moment to Match</title>
   </head>
   <body>
@@ -18,8 +20,8 @@
           <button type="button"
                   label="Shuffle Cards"
                   id='shuffleButton'
-                  v-on:click='shuffleCards()'>
-                  Shuffle Cards
+                  v-on:click='window.location.reload(true)'>
+                  New Game
           </button>
         </div>
 
@@ -31,6 +33,7 @@
             v-bind:class='{
               unselected: card.selected === "unselected",
               matched: card.selected === "matched",
+              winning: card.winning === true,
               mismatch: card.text ==="X",
               red: card.color === "red",
               orange: card.color === "orange",
